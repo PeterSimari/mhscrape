@@ -23,6 +23,22 @@ def generation_object(data, object_name):
 
     return data_object
 
+def clean_paragraphs(data):
+    return " ".join(data).strip().replace('\n', '').replace(' .', '.').replace(' ,', ',').repalce('  ', ' ') if data else None
+
+def generation_convert_to_num(data):
+    ordinal_map = {
+        "First": 1,
+        "Second": 2,
+        "Third": 3,
+        "Fourth": 4,
+        "Fifth": 5,
+        "Sixth": 6,
+        "Seventh": 7,
+    }
+    # Only returning the first element, since it will be the lowest generation that it was introduced- can say 'greater than 1st gen' essentially
+    return ordinal_map.get(data[0], 0) 
+
 class MonsterSpider(scrapy.Spider):
     name = "monsters"
 
@@ -41,9 +57,27 @@ class MonsterSpider(scrapy.Spider):
         item["jp_name"] = response.css("rb[lang='ja-Hani']::text").get()
         item["en_title"] = content_filter(response.css("div[data-source='English Title'] *::text").getall(), 'English Title')
         item["monster_class"] = content_filter(response.css("div[data-source='Monster Type'] *::text").getall(), 'Monster Class')
-        item["elements"] = content_filter(response.css("div[data-source='Element'] *::text").getall(), 'Elements')
-        item["ailments"] = generation_object(content_filter(response.css("div[data-source='Ailments'] *::text").getall(), 'Ailments'), 'ailments')
-        item["weakest_to"] = generation_object(content_filter(response.css("div[data-source='Weakest to'] *::text").getall(), 'Weakest to'), 'weakest_to')
+        item["elements"] = generation_object(content_filter(response.css("div[data-source='Element'] *::text").getall(), 'Elements'), 'element')
+        item["ailments"] = generation_object(content_filter(response.css("div[data-source='Ailments'] *::text").getall(), 'Ailments'), 'ailment')
+        item["weakest_to_elements"] = generation_object(content_filter(response.css("div[data-source='Weakest to'] *::text").getall(), 'Weakest to'), 'weakest_to')
+        item["habitats"] = content_filter(response.css("div[data-source='Habitats'] *::text").getall(), 'Habitat')
+        item["generation"] = generation_convert_to_num(content_filter(response.css("div[data-source='Generation'] *::text").getall(), 'Generation'))
+
+        physiology = clean_paragraphs(response.xpath("//h2[span[@id='Physiology']]//following-sibling::p[1]//text()").getall())
+        if physiology:
+            item["physiology_desc"] = physiology
+
+        abilities = clean_paragraphs(response.xpath("//h2[span[@id='Abilities']]//following-sibling::p[1]//text()").getall())
+        if abilities:
+            item["abilities_desc"] = abilities
+
+        behavior = clean_paragraphs(response.xpath("//h2[span[@id='Behavior']]//following-sibling::p[1]//text()").getall())
+        if behavior:
+            item["behavior_desc"] = behavior
+
+        habitat = clean_paragraphs(response.xpath("//h2[span[@id='Habitat']]//following-sibling::p[1]//text()").getall())
+        if habitat:
+            item["habitat_desc"] = habitat
         
         yield item
         # page = response.url.split("/")[-2]
