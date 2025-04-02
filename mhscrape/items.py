@@ -25,3 +25,11 @@ class Monster(scrapy.Item):
     abilities_desc = scrapy.Field()
     behavior_desc = scrapy.Field()
     habitat_desc = scrapy.Field()
+    games = scrapy.Field()
+    item_effectiveness = scrapy.Field()
+
+class ItemEffectiveness(scrapy.Item):
+    name = scrapy.Field()
+    able = scrapy.Field()
+    effectiveness = scrapy.Field()
+    notes = scrapy.Field()

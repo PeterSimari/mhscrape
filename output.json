@@ -1,0 +1,269 @@
+[
+    {
+        "en_name": "Rathalos",
+        "jp_name": "リオレウス",
+        "en_title": [
+            "Fire Wyvern",
+            "King of the Skies"
+        ],
+        "monster_class": [
+            "Flying Wyvern"
+        ],
+        "elements": [
+            {
+                "element": "Fire",
+                "generation": null
+            }
+        ],
+        "ailments": [
+            {
+                "ailment": "Fireblight",
+                "generation": "3"
+            },
+            {
+                "ailment": "Stun",
+                "generation": null
+            },
+            {
+                "ailment": "Poison",
+                "generation": null
+            }
+        ],
+        "weakest_to_elements": [
+            {
+                "weakest_to": "Ice",
+                "generation": "2"
+            },
+            {
+                "weakest_to": "Water",
+                "generation": "2"
+            },
+            {
+                "weakest_to": "Dragon",
+                "generation": "2"
+            },
+            {
+                "weakest_to": "Thunder",
+                "generation": "3"
+            }
+        ],
+        "habitats": [
+            "Forest and Hills",
+            "Old Swamp",
+            "Old Volcano",
+            "Volcano",
+            "Tower",
+            "Tower 3",
+            "Deserted Island",
+            "Volcano (3rd)",
+            "Ancestral Steppe",
+            "Volcanic Hollow",
+            "Heaven's Mount",
+            "Tower Summit",
+            "Everwood",
+            "Jurassic Frontier",
+            "Verdant Hills",
+            "Ruined Pinnacle",
+            "Ancient Forest",
+            "Elder's Recess",
+            "Guiding Lands",
+            "Shrine Ruins",
+            "Lava Caverns",
+            "Red Stronghold",
+            "Infernal Springs",
+            "Citadel",
+            "Forlorn Arena (MHRS)",
+            "Windward Plains",
+            "Scarlet Forest",
+            "Oilwell Basin",
+            "Gorge",
+            "Highland",
+            "Interceptor's Base",
+            "Fortress Ruins",
+            "Esther Lake",
+            "Moonlands",
+            "Ghost Rune Volcanoes",
+            "Firefly Mountain Stream",
+            "Pondry Hills"
+        ],
+        "generation": 1,
+        "physiology_desc": "Rathalos are large, bipedal wyverns with a spiny, armored hide covering their body. Their outer shell features much brighter and more vibrant colors than that of their female counterpart, the Rathian. It is primarily bright red, with black markings throughout. Like the Rathian, Rathalos possess a flame sac which is used to produce deadly flaming projectiles from the mouth. The talons upon their feet are highly poisonous and are known to inflict toxic mortal wounds on larger prey. In addition, their long, thick tail features a heavy spiked club at the end. Rathalos' wing membranes feature ornate patterns which are likely used to attract potential mates.",
+        "abilities_desc": "Rathalos are expert flyers, and as such are prone to hunting from the skies. By launching a surprise aerial attack, they can inflict poisonous wounds with their talons or burn prey with flaming projectiles. On the ground, Rathalos remain formidable opponents. Using their powerful legs, they can chase down prey from a distance or inflict blunt-force damage with their clubbed tail. At a close enough range, they are known to use their sharp teeth to bite at foes as well. Some Rathalos are capable of staying in the air and launching a \"few\" fireballs before landing back to the ground.",
+        "behavior_desc": "Rathalos are highly territorial monsters, and as such, are aggressive towards intruders. They will chase away or attempt to kill any monster which may pose a threat to their land. While hunting, Rathalos will stalk prey from the air before swooping in for the kill. Once they have successfully brought down their prey, they will carry it away to eat in private, safe from scavengers or other large monsters which might attempt to steal the kill.",
+        "habitat_desc": "Rathalos have been spotted in many kinds of environments, from the temperate Forest and Hills to the extreme heat of the Volcano. As a master of flight, they will travel far and wide, searching for prey from the skies. Rathalos is also the apex predator of the Ancient Forest alongside Nargacuga.",
+        "games": [
+            "Monster Hunter",
+            "Monster Hunter G",
+            "Monster Hunter Freedom",
+            "Monster Hunter 2",
+            "Monster Hunter Freedom 2",
+            "Monster Hunter Freedom Unite",
+            "Monster Hunter 3",
+            "Monster Hunter Portable 3rd",
+            "Monster Hunter 3 Ultimate",
+            "Monster Hunter 4",
+            "Monster Hunter 4 Ultimate",
+            "Monster Hunter Generations",
+            "Monster Hunter Generations Ultimate",
+            "Monster Hunter: World",
+            "Monster Hunter World: Iceborne",
+            "Monster Hunter Rise",
+            "Monster Hunter Rise: Sunbreak",
+            "Monster Hunter Wilds"
+        ],
+        "item_effectiveness": [
+            {
+                "Item Effect": "✔",
+                "Item Name": "★★★",
+                "Able": "Shock Trap",
+                "Effectiveness": "✔",
+                "Duration": "★★★",
+                "Notes": "Flash Bomb",
+                "1st time": "✔",
+                "2nd time": "★★★",
+                "Pitfall Trap": "Only works if monster is facing the flash bomb when it goes off. Also works to free a pinned hunter."
+            },
+            {
+                "Item Effect": "Sonic Bomb",
+                "Item Name": "x",
+                "Able": "☆☆☆",
+                "Effectiveness": "Dung Bomb",
+                "Duration": "✔",
+                "Notes": "★★★",
+                "1st time": "Used to get out of Pin Attack and will (sometimes) make him change area.",
+                "2nd time": "Meat",
+                "Pitfall Trap": "✔"
+            },
+            {
+                "Item Effect": "★☆☆",
+                "Item Name": "Only works when the monster has not noticed the hunter.",
+                "Able": null,
+                "Effectiveness": null,
+                "Duration": null,
+                "Notes": null,
+                "1st time": null,
+                "2nd time": null,
+                "Pitfall Trap": null
+            }
+        ]
+    },
+    {
+        "en_name": "Rathian",
+        "jp_name": "リオレイア",
+        "en_title": [
+            "Female Fire Wyvern",
+            "Queen of the Land"
+        ],
+        "monster_class": [
+            "Flying Wyvern"
+        ],
+        "elements": [
+            {
+                "element": "Fire",
+                "generation": null
+            }
+        ],
+        "ailments": [
+            {
+                "ailment": "Fireblight",
+                "generation": "3"
+            },
+            {
+                "ailment": "Poison",
+                "generation": null
+            }
+        ],
+        "weakest_to_elements": [
+            {
+                "weakest_to": "Dragon",
+                "generation": null
+            },
+            {
+                "weakest_to": "Thunder",
+                "generation": null
+            },
+            {
+                "weakest_to": "Water",
+                "generation": null
+            }
+        ],
+        "habitats": [
+            "Forest and Hills",
+            "Old Jungle",
+            "Old Desert",
+            "Old Swamp",
+            "Jungle",
+            "Desert",
+            "Swamp",
+            "Great Forest",
+            "Tower",
+            "Tower 3",
+            "Deserted Island",
+            "Sandy Plains",
+            "Flooded Forest",
+            "Misty Peaks",
+            "Ancestral Steppe",
+            "Sunken Hollow",
+            "Primal Forest",
+            "Heaven's Mount",
+            "Everwood",
+            "Tower Summit",
+            "Dunes",
+            "Jurassic Frontier",
+            "Verdant Hills",
+            "Marshlands",
+            "Ruined Pinnacle",
+            "Ancient Forest",
+            "Wildspire Waste",
+            "Guiding Lands",
+            "Shrine Ruins",
+            "Sandy Plains (Rise)",
+            "Flooded Forest (Rise)",
+            "Lava Caverns",
+            "Red Stronghold",
+            "Infernal Springs",
+            "Jungle (MHRS)",
+            "Windward Plains",
+            "Scarlet Forest",
+            "Oilwell Basin",
+            "Great Forest Peak",
+            "Gorge",
+            "Highland",
+            "Interceptor's Base",
+            "Fortress Ruins",
+            "Dawnwind Valley",
+            "Dark Veil Forest",
+            "Esther Lake",
+            "Ancestral Tomb",
+            "Moonlands",
+            "Firefly Mountain Stream",
+            "Monsonne Plains"
+        ],
+        "generation": 1,
+        "physiology_desc": "Rathian is a medium-sized true flying wyvern similar in looks to her male counterpart, Rathalos. Her hide is a dull, muted green in contrast to the Rathalos's deep red, and her lower mandible features a long, protruding chin spike. Her upper back and wingtips are covered in a moss-like fur not seen on the Rathalos, and while her clubbed tail lacks bony spikes, it makes up for this with the presence of sharp and highly poisonous needles, which she can use to poison foes upon contact.",
+        "abilities_desc": "Rathian, like her mate, can generate flaming projectiles from her mouth. She is notably more proficient in the use of this weapon however, as she is commonly seen releasing multiple blasts at once. In addition, she is capable of charging up and releasing a more potent fire blast which can ignite a swath of ground in front of her. She can use the poisonous barbs on her tail club to inflict blunt-force, toxic wounds on foes, even if her tail was cut off. Her powerful legs allow her to run at high speeds, making her easily capable of chasing down most prey. Like the Rathalos, her vision is very keen, so Flash Bombs are useful in combat.",
+        "behavior_desc": "Rathian is very territorial, choosing to patrol from ground while her Rathalos mate patrols from the sky. She will become very aggressive to potential threats, especially when in close proximity to her nest and young. Rathian and Rathalos will always go after hunters that are carrying their eggs.",
+        "habitat_desc": "Rathians can survive in almost any territory, but prefers areas with average temperature for nesting. As a result, she is known to be encountered in a large variety of areas such as the Jungle, Sandy Plains, and Primal Forest.",
+        "games": [
+            "Monster Hunter",
+            "Monster Hunter G",
+            "Monster Hunter Freedom",
+            "Monster Hunter 2",
+            "Monster Hunter Freedom 2",
+            "Monster Hunter Freedom Unite",
+            "Monster Hunter 3",
+            "Monster Hunter Portable 3rd",
+            "Monster Hunter 3 Ultimate",
+            "Monster Hunter 4",
+            "Monster Hunter 4 Ultimate",
+            "Monster Hunter Generations",
+            "Monster Hunter Generations Ultimate",
+            "Monster Hunter: World",
+            "Monster Hunter World: Iceborne",
+            "Monster Hunter Rise",
+            "Monster Hunter Rise: Sunbreak",
+            "Monster Hunter Wilds"
+        ],
+        "item_effectiveness": []
+    }
+]

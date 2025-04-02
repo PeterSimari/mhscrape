@@ -24,7 +24,33 @@ def generation_object(data, object_name):
     return data_object
 
 def clean_paragraphs(data):
-    return " ".join(data).strip().replace('\n', '').replace(' .', '.').replace(' ,', ',').repalce('  ', ' ') if data else None
+    return " ".join(data).strip().replace('\n', '').replace(' .', '.').replace(' ,', ',').replace('  ', ' ') if data else None
+
+def clean_table(data):
+    clean_data = [cell.strip() for cell in data if cell.strip()]
+    if not clean_data:
+        return []
+    
+    headers = []
+    for i, cell in enumerate(clean_data):
+        if all(len(word) > 1 for word in cell.split()):
+            headers.append(cell)
+        else:
+            break
+    
+    data_rows = clean_data[len(headers):]
+
+    rows = []
+    row_length = len(headers)
+    for i in range(0, len(data_rows), row_length):
+        row = data_rows[i:i + row_length]
+
+        while len(row) < row_length:
+            row.append(None)
+        row_dict = dict(zip(headers, row))
+        rows.append(row_dict)
+    
+    return rows
 
 def generation_convert_to_num(data):
     ordinal_map = {
@@ -79,6 +105,10 @@ class MonsterSpider(scrapy.Spider):
         if habitat:
             item["habitat_desc"] = habitat
         
+        item["games"] = content_filter(response.xpath("//h3[span[@id='Main_Series']]//following-sibling::ul[1]//text()").getall(), '(Introduced)')
+
+        item["item_effectiveness"] = clean_table(response.xpath("//h3[span[@id='MHW_Damage_Effectiveness']]//following-sibling::table[1]//text()").getall())
+
         yield item
         # page = response.url.split("/")[-2]
         # filename = f"monsters-{page}.html"
