@@ -4,6 +4,8 @@ import scrapy
 import re
 from mhscrape.items import Monster
 
+# Im not focused on this part of the project at the moment.
+
 def content_filter(items, default):
     return [item for item in items if item.strip() and item not in [default]]
 

@@ -33,3 +33,20 @@ class ItemEffectiveness(scrapy.Item):
     able = scrapy.Field()
     effectiveness = scrapy.Field()
     notes = scrapy.Field()
+
+class Skill(scrapy.Item):
+    id = scrapy.Field()
+    name = scrapy.Field()
+    description = scrapy.Field()
+    type = scrapy.Field()
+    levels = scrapy.Field()
+
+class Levels(scrapy.Item):
+    level = scrapy.Field()
+    description = scrapy.Field()
+    stats = scrapy.Field()
+
+class Stats(scrapy.Item):
+    type = scrapy.Field()
+    buff = scrapy.Field()
+    multiplier = scrapy.Field()

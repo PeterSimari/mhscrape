@@ -2,6 +2,10 @@
 Monster Hunter Wiki scraper
 
 In the directory of the project, you'll have to setup your own virtual environment.
+Once Virtual Environment is setup:
+```
+source env/bin/activate
+```
 I'll eventually add a requirements.txt, but you mainly just need python3 and scrapy installed to be able to run this.
 
 ## Running a spider:
